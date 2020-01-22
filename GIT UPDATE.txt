@@ -1,0 +1,26 @@
+https://docs.google.com/document/d/1HonahPqGRnmeNETOin-KjVWv3wGLw-YD3OohrlLJhDM/edit?usp=sharing
+
+FIRST USE:
+git config --global user.email "ricciyeh880427@gmail.com"
+git config --global user.name "YehRenHao"
+
+BUILD repository
+git init
+git add .
+git commit -m "comments ..."
+COPY <repository url>
+git remote add origin <repository url>
+git push -u origin master
+
+TO IO
+git checkout -b gh-pages
+git checkout master
+
+UPDATE
+git add .
+git commit -m “commit”
+git push -u origin master
+git checkout gh-pages
+git merge master
+git push origin gh-pages
+git checkout master
