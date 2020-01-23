@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="files/main.css">
 	</head>
 	<body>
+
 		<div id="panel">
 
 			<div id="header">
@@ -15,7 +16,7 @@
 
 				<div id="sections">
 					<span class="selected">docs</span>
-					<a href="examples">examples</a>
+					<a href="examples/#minimal">examples</a>
 				</div>
 
 				<div id="expandButton"></div>
@@ -43,6 +44,27 @@
 			</div>
 
 		</div>
+
+		<script>
+			var panel = document.getElementById( 'panel' );
+			var expandButton = document.getElementById( 'expandButton' );
+			var panelScrim = document.getElementById( 'panelScrim' );
+	
+			expandButton.addEventListener( 'click', function ( event ) {
+	
+				panel.classList.toggle( 'open' );
+				event.preventDefault();
+	
+			} );
+	
+			panelScrim.onclick = function ( event ) {
+	
+				event.preventDefault();
+				panel.classList.toggle( 'open' );
+	
+			};
+	
+		</script>
 
 		<iframe id="viewer" name="viewer" src="demo.html"></iframe>
 
