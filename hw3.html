@@ -10,14 +10,14 @@
 
 <body>
 
-	<script src="./jsm/jquery-2.1.4.min.js"></script>
-	<script src="./jsm/controls/KeyboardState.js"></script>
+	<script src="../jsm/jquery-2.1.4.min.js"></script>
+	<script src="../jsm/controls/KeyboardState.js"></script>
 
 	<script type="module">
-		import * as THREE from './jsm/three.module.js';
-		import { OrbitControls } from './jsm/controls/OrbitControls.js';
-		import { OBJLoader } from './jsm/loaders/OBJLoader.js';
-		import { MTLLoader } from './jsm/loaders/MTLLoader.js';
+		import * as THREE from '../jsm/three.module.js';
+		import { OrbitControls } from '../jsm/controls/OrbitControls.js';
+		import { OBJLoader } from '../jsm/loaders/OBJLoader.js';
+		import { MTLLoader } from '../jsm/loaders/MTLLoader.js';
 
 		var camera, cameraMap, cameraHUD, scene, sceneHUD, renderer, controls;
 		var clock;
@@ -29,7 +29,11 @@
 				return Math.min(Math.max(val, min), max);
 			}
 		})();
-
+		
+		function MathClamp(val, min, max) {
+			return Math.min(Math.max(val, min), max);
+		}
+		
 		function exponentialEaseOut(k) {
 			return k === 1 ? 1 : - Math.pow(2, - 10 * k) + 1;
 		}
